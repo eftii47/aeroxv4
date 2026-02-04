@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AeroX Dashboard</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>AeroX Bot Dashboard</h1>
+        <p>Live command catalog and feature overview generated from the bot codebase.</p>
+        <div class="hero-meta">
+          <span id="generatedAt">Loading…</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="summary" aria-live="polite">
+        <div class="summary-card">
+          <h2>Total Commands</h2>
+          <p id="totalCommands">—</p>
+        </div>
+        <div class="summary-card">
+          <h2>Slash Enabled</h2>
+          <p id="slashEnabled">—</p>
+        </div>
+        <div class="summary-card">
+          <h2>Categories</h2>
+          <p id="categoriesCount">—</p>
+        </div>
+        <div class="summary-card">
+          <h2>Subcategories</h2>
+          <p id="subcategoriesCount">—</p>
+        </div>
+      </section>
+
+      <section class="controls">
+        <div class="search">
+          <label for="searchInput">Search commands</label>
+          <input id="searchInput" type="search" placeholder="Search by name, description, usage…" />
+        </div>
+        <button id="refreshButton" class="btn" type="button">Refresh data</button>
+      </section>
+
+      <section id="categories" class="categories" aria-live="polite"></section>
+    </main>
+
+    <footer class="footer">
+      <p>Dashboard served from the bot healthcheck server.</p>
+    </footer>
+
+    <script src="/assets/app.js"></script>
+  </body>
+</html>
